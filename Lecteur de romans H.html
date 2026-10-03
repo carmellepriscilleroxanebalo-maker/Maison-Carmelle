@@ -1,0 +1,109 @@
+<DOCTYPE html>
+<!--
+    This is a self-contained HTML file for a web page that allows users to open links to novels and books for reading.
+    It includes all necessary HTML, CSS, and Javascript within a single file.
+-->
+<html lang="fr">
+    <!--
+        The <html>tag represents the root of an HTML document.
+        The lang attribute specifies the language of the document, wich is French (fr) as per the user request. 
+    -->
+    <head>
+        <!--
+            The <head> element contains machines-readable information (metadata) about the document,like its title, script, and style sheets.
+        -->
+            <meta charset="UTF-8" />
+            <!--
+            The <meta> tag with charset="UTF-8" specifies the character encoding for the document, ensuring proper display of various characters, including French accents.
+            -->
+            <meta name="viewport" content="width =device-width, initial-scale=1.0"/>
+            <!--
+                The <meta> tag with name="viewport" configures the viewport, making the page responsive and adapting to different device screen sizes.
+                width=device-width sets the width of the viewport to the device's width.
+                Initial-scale=1.0 sets the initial zoom level when the page is first loaded.
+            -->
+    <title>Lecteur de Romans et Livres
+        </title>
+    <!--
+    The <link> tag preconnects to google fronts domain, optiminzing the loading of web fonts by establishing an early connection.
+    -->        
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--
+        This <link> tag preconnects to Google Fonts static content domain, with the crossorigin attributr to handle CORS (Cross-Origin Resource Sharing)requests, further optimizing font loading.
+    -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--
+        This <link> tag preconnects to Google fonts static content domain, with the crossorigin attribute to handle CORS (Cross-Origin Ressource Sharing) requests, further optiminzing font loading.
+    -->
+    <link
+       href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wgh@400;600&display=swap"
+       rel="stylesheet"       
+    />
+    <!--
+        This <link> tag imports google fonts CSS for Merriweather (serif, good for body text /heading)and open sans (sans-serif,good for UI elements/paragraph),enhancing readability and design to use a fallback font while the custom font is loading.
+    -->
+
+    <style>
+        /*
+            The <style> tag contains all the CSS rules for styling the HTML document.
+        */
+        :root {
+           /*
+                The :root pseudo-class represents the <html> element and allows definiting css variables
+                that can be used throughout that document.
+           */ 
+           --primary-color: #3f51b5; /*Definies a primary brand color (indigo blue)*/
+           --secondary-color: #ff9800; /*Definies a secondary color(orange) */
+           --text-color: #333; /*Definies a default dark text color */
+           --light-text-color: #555; /*Definies a slightly lighter dark text color */ 
+           --background-color: #f4f7f6; /*Definies a light background for cads/sections */
+           --card-background-color: #ffffff; /* Definies white background for cads/sections */
+           --border-color: #e0e0e0; /* Definies a light grey border color */
+           --box-shadow-color: rgba(0, 0, 0, 0.08); /* Definies serif a subtle shadow color */
+           --font-serif: "Merriweather", serif; /*  Definies serif font stack */
+           --font-sans-serif: "Open Sans", sans-serif; /* Definies sans -serif font stack */
+           --max-width: 1200px; /* Definies a maximumm content width for larger screens */
+        }
+        /* Basic reset for consistent styling accross browsers */
+        *,
+        *::before
+        *::after {
+            /*
+                The universal selector (*) along with ::before and ::after pseudo-elements.
+                box-sizing: border-box ensures that padding and border are included in the element's total width and height.
+            */
+            box-sizing: border-box;
+            margin: 0; /* Removes default margin from all elements */
+            padding: 0; /* removes default padding from all elements */
+        }
+        body {
+            /*
+                Styles for the <body> element.
+            */
+            font-family: var(--font-sans-serif); /* Sets default font to sans-serif variable */
+            line-height: 1.6; /* Sets a comfortable line height for readability */
+            color: var(--text-color); /* Sets default text color from variable */
+            background-color: var(--background-color); /* Sets page background color from variable */
+            display: flex; /* Enables flexbox for body to manage overall layout */
+            flex-direction: column; /* Stacks children vertically */
+             min-height: 100vh; /* Ensures body takes at least full viewport height */ 
+        }
+        header {
+            /*
+            Styles for the <header> element.
+            */
+            background-color: var(--primary-color); /* Primary color background */
+            color: #fff; /* white text horizontal padding */
+            padding: 1rem 0; /* vertical padding, no horizontal padding */ 
+            box-shadow: 0 2px 4px var(--box-shadow-color); /* Subtle shadow for depth */ 
+        }
+        header .container {
+            /* Styles for a container div inside the header, content centering.
+            */
+            display: flex; /*Enables flexbox */
+            justify-content: space-between; /* Spaces items evenly apart */
+            align-items: center; /* items vertically in the center */
+            max-width: var(--max-width); /* Limits content width */
+            margin: 0 auto; /*
+        
+            }
